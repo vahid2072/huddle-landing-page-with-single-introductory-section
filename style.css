@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background-color: var(--Violet);
+}
+
+.container {
+  margin: 50px auto;
+  width: 375px;
+  height: 750px;
+  background-image: url(./images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.huddle-icon {
+  background-image: url(./images/logo.svg);
+  width: 30%;
+  background-size: cover;
+  padding-bottom: calc(8% * 3 / 4);
+  position: relative;
+  top: 35px;
+  left: -80px;
+}
+
+.bg-mobile-icon {
+  background-image: url(./images/illustration-mockups.svg);
+  width: 80%;
+  background-size: cover;
+  padding-bottom: calc(75% * 3 / 4);
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: -50px;
+  position: relative;
+  top: 55px;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin-top: 160px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: white;
+  margin: auto 50px;
+  line-height: 1.6rem;
+}
+
+button {
+  width: 50%;
+  color: var(--Violet);
+  border: none;
+  border-radius: 18px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  box-shadow: -1px 3px 7px 0px rgba(0,0,0,0.6);
+}
+
+button:hover {
+  color: white;
+  background-color: var(--Soft-Magenta);
+}
+
+.fa {
+  padding: 7px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.fa:hover {
+   color: var(--Soft-Magenta);
+   border: 1px solid var(--Soft-Magenta);
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram
+ {
+  color: white;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(84, 93%, 48%); }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    background-image: none;
+    text-align: center;
+  }
+
+  .left-section {
+    width: 50%;
+  }
+
+  .huddle-icon {
+    background-image: url(./images/logo.svg);
+    width: 50%;
+    background-size: cover;
+    padding-bottom: calc(15% * 3 / 4);
+    position: relative;
+    top: -200px;
+    left: -80px;
+  }
+  
+  .bg-mobile-icon {
+    background-image: url(./images/illustration-mockups.svg);
+    width: 100%;
+    background-size: cover;
+    padding-bottom: calc(95% * 3 / 4);
+    position: relative;
+    top: -200px;
+  }
+
+  .right-section {
+    width: 50%;
+  }
+
+  h1 {
+    /* margin-left: 10px; */
+    text-align: left;
+    margin-top: -130px;
+    font-size: 22px;
+  }
+  
+  p {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  button {
+    margin-left: -100px;
+    width: 40%;
+  }
+
+  .social-media {
+    position: absolute;
+    bottom: 10px;
+    right: 250px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 900px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    margin-left: -180px;
+    width: 40%;
+  }
+
+  .social-media {
+    position: absolute;
+    right: 100px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+
+  .left-section {
+    width: 50%;
+  }
+
+  .huddle-icon {
+    top: -120px;
+  }
+  
+  .bg-mobile-icon {
+    top: -120px;
+  }
+
+  .right-section {
+    width: 50%;
+  }
+
+  h1 {
+    margin-top: -130px;
+    font-size: 32px;
+  }
+  
+  button {
+    margin-left: -320px;
+    width: 30%;
+    padding: 18px;
+    border-radius: 40px;
+  }
+}
